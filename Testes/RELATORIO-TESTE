@@ -229,3 +229,22 @@ public class JulgamentoPrisioneiro {
 }
 
 Relatório: Correção da classe principal -> alterar o retorno para PENA_CONDENACAO_CUMPLICES e corrigindo o valor da pena para 1.
+------------------------------------------------------------------------------------------------------------------------------------
+RODADA 7
+
+JulgamentoPrisioneiroTeste.java
+
+@Test
+	void testeInocencia() {
+		String respostaPrisioneiroA = "Inocente";
+		String respostaPrisioneiroB = "Inocente";
+		
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+		
+		int resultadoEsperado = 0;
+		int resultadoReal = jp.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);
+		
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+
+Relatório: ERRO -> Retornou 1 e o resultado esperado era 0.

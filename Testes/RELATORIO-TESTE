@@ -182,3 +182,22 @@ JulgamentoPrisioneiroTeste.java
 	}
 
 Relatório: Teste da condenação individual (deu certo).
+------------------------------------------------------------------------------------------------------------------------------------
+RODADA 5
+
+JulgamentoPrisioneiroTeste.java
+
+@Test
+	void testeCondenacaoCumplices() {
+		String respostaPrisioneiroA = "Inocente";
+		String respostaPrisioneiroB = "Culpado";
+		
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+		
+		int resultadoEsperado = 1;
+		int resultadoReal = jp.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);
+		
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+
+Relatório: ERRO -> Retornou 10 e o resultado correto era 1.
